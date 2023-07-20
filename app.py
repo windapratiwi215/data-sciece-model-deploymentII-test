@@ -38,3 +38,16 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+prediction = model.predict(single_sample)
+pred_proba = model.predict_proba(single_sample)
+# st.write(prediction)# st.write(pred_proba)
+pred_probability_score = {'Promoted':round(pred_proba[0][1]*100,4),
+                                'Not Promoted':round(pred_proba[0][0]*100,4)}
+
+if prediction == 1:
+   st.success("Congratulations, You are Promoted")
+   st.write(pred_probability_score)
+else:
+   st.warning("Always give the contribution")
+   st.write(pred_probability_score)
