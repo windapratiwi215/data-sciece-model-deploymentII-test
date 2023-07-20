@@ -25,7 +25,7 @@ def main():
     # st.title("Main App")
     stc.html(html_temp)
 
-    menu = ["Home","Machine Learning"]
+    menu = ["Home", "Machine Learning"]
     choice = st.sidebar.selectbox("Menu", menu)
 
     if choice == "Home":
@@ -39,19 +39,3 @@ def main():
 if __name__ == '__main__':
     main()
 
-    model = load_model("model_grad.pkl")
-
-    prediction = model.predict(single_sample)
-    pred_proba = model.predict_proba(single_sample)
-    # st.write(prediction)
-    # st.write(pred_proba)
-    pred_probability_score = {'Promoted':round(pred_proba[0][1]*100,4),
-                                'Not Promoted':round(pred_proba[0][0]*100,4)}
-
-    if prediction == 1:
-        st.success("Congratulations, You are Promoted")
-        
-        st.write(pred_probability_score)
-    else:
-        st.warning("Always give the contribution")
-        st.write(pred_probability_score)
