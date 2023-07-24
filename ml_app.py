@@ -8,7 +8,7 @@ import os
 dep = {'Sales & Marketing':1, 'Operations':2, 'Technology':3, 'Analytics':4,
        'R&D':5, 'Procurement':6, 'Finance':7, 'HR':8, 'Legal':9}
 edu = {'Below Secondary':1, "Bachelor's":2, "Master's & above":3}
-rec = {'referred':1, 'sourcing':2, 'other':3}
+rec = {'referred':1, 'sourcing':2, 'others':3}
 gen = {'m':1, 'f':2}
 reg = {'region_1':1,'region_2':2,'region_3':3,'region_4':4,'region_5':5,
        'region_6':6,'region_7':7,'region_8':8,'region_9':9,'region_10':10,
